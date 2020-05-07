@@ -124,7 +124,7 @@ http.post = function(url, data, options) {
           loading = document.getElementById("ajaxLoading");
           loading.style.display = "none";
         }
-        if (response.code === 1) {
+        if (response.code === 1|| response.apiCode=== 200)  {
           resolve(response.data);
         } else {
           Message.error({
